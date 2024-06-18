@@ -1,0 +1,60 @@
+.pagProjetos {
+  padding-top: 10px;
+}
+
+.home {
+  margin: 2rem;
+  text-align: left;
+  /* Verde padrão do Bootstrap */
+  /* Borda arredondada */
+  /* Sombra para um efeito 3D */
+  max-height: 500px;
+  min-height: 200px;
+  /* Adiciona barra de rolagem quando necessário */
+  /* border: solid 1px; */
+}
+
+h1,#totalproje {
+  text-align: center;
+  color: white;
+}
+
+.button-container {
+  /* border: solid 1px; */
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  align-items: flex;
+  gap: 1rem;
+  justify-content: center;
+  /* Espaçamento entre os botões */
+}
+
+.button-container input[type="button"] {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 10px;
+  transition: 0.45;
+  /* Transição suave */
+}
+
+.button-container input[type="button"]:hover {
+  background-color: green;
+  color: white;
+  /* Alterar a cor do texto para branco ao passar o mouse */
+  border-color: rgb(255, 255, 255);
+  transform: scale(1.25);
+  /* Aumenta o botão em 10% */
+
+}
+
+.button-container input[type="button"]:focus {
+  outline: none;
+  /* Remover outline padrão ao focar */
+  box-shadow: 0 0 5px green;
+  /* Adicionar sombra ao focar */
+}

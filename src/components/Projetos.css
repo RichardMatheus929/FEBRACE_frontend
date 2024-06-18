@@ -1,0 +1,54 @@
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+p,
+h3 {
+    padding: 3px;
+    color: white;
+}
+
+.paginacao {
+    /* border: solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    /* justify-content: space-between; */
+}
+
+
+.projetos a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+    opacity: 0.7;
+}
+
+.projetos a:hover {
+    opacity: 1;
+}
+
+.item_p,
+h3 {
+    color: #ffffff;
+}
+
+.btn-paginacao {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 10px;
+    transition: 0.45;
+    /* Transição suave */
+}
+
+.Loading {
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+}

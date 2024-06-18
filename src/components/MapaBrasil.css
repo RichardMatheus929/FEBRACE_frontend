@@ -1,0 +1,48 @@
+svg {
+    min-width: 100%;
+    min-height: 61vh;
+}
+
+/* Media query para telas menores que 768px (exemplo para dispositivos móveis) */
+@media (max-width: 767px) {
+    svg {
+        min-width: 100%;
+        /* Largura mínima para dispositivos móveis */
+        width: 100%;
+        /* Garante que o SVG ocupe toda a largura disponível */
+        height: auto;
+        /* Permite que a altura se ajuste proporcionalmente à largura */
+        min-height: auto;
+        /* Altura mínima automática */
+    }
+}
+
+.norte {
+    fill: #63ab3f;
+}
+
+.nordeste {
+    fill: #f0b541;
+}
+
+.centro-oeste {
+    fill: #ffae70;
+}
+
+.sudeste {
+    fill: #4fa4b8;
+}
+
+.sul {
+    fill: #686f99;
+}
+
+path {
+    fill: #1da1f2;
+    stroke: rgb(0, 0, 0);
+}
+
+path:hover {
+    fill: #cccccc;
+    cursor: pointer;
+}
