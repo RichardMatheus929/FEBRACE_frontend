@@ -15,11 +15,16 @@ const home = () => {
 
     return (
         <div className='pagProjetos'>
-            <h1>Febrace - Projetos premiados {ano}</h1> <br />
-            <h3 id='totalproje'> {totalPag} projetos</h3>
+            <div className='mainProjetos'>
+                <h1>Febrace - Projetos premiados  </h1> <h1 id='ano'>{ano}</h1>
+            </div><br />
+            <div className='qntdProjetos'>
+                <h3 id='projetos-total'>{totalPag}</h3> <h3>projetos</h3>
+            </div>
             <div className="button-container">
                 <input type="button" value="Todos os anos" onClick={() => setAno("todos os anos")} />
                 <input type="button" value="2023" onClick={() => { setAno(2023) }} />
+                <input type="button" value="2022" onClick={() => { setAno(2022) }} />
                 <input type="button" value="2021" onClick={() => { setAno(2021) }} />
                 <input type="button" value="2020" onClick={() => { setAno(2020) }} />
                 <input type="button" value="2019" onClick={() => { setAno(2019) }} />

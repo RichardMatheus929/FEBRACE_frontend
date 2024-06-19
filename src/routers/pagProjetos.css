@@ -2,6 +2,21 @@
   padding-top: 10px;
 }
 
+.mainProjetos {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.qntdProjetos {
+  display: flex;
+  justify-content: center;
+}
+
+#projetos-total,#ano {
+  color: green;
+}
+
 .home {
   margin: 2rem;
   text-align: left;
@@ -14,7 +29,7 @@
   /* border: solid 1px; */
 }
 
-h1,#totalproje {
+h1 {
   text-align: center;
   color: white;
 }
