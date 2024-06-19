@@ -20,11 +20,12 @@ const Dashboard = () => {
             <div className='filtro'>
                 <p>Todos os anos</p>
                 <div className='btn-anos'>
-                    <input type="button" value="2024" />
                     <input type="button" value="2023" />
                     <input type="button" value="2022" />
                     <input type="button" value="2021" />
                     <input type="button" value="2020" />
+                    <input type="button" value="2019" />
+                    <input type="button" value="2018" />
                 </div>
                 <div className='mapa'>
                     <MapaBrasil></MapaBrasil>
