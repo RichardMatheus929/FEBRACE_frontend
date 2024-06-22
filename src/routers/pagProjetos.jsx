@@ -9,13 +9,15 @@ const Home = () => {
     const [searchName, setSearchName] = useState('');
     const [searchEscola, setSearchEscola] = useState('');
 
+    const [esconderFilter, setEsconderFilter] = useState(false)
+
     const totalproje = (totalPag) => {
         setTotalPag(totalPag)
     }
 
     return (
         <div className='pagProjetos'>
-            <div className='cabecalho'>
+            <div className={esconderFilter ? 'esconder' : 'cabecalho'}>
                 <div className='filtro_pesquisa'>
                     <h1>Pesquise por nome ou escola do projeto</h1>
                     <form action="post">
@@ -47,17 +49,31 @@ const Home = () => {
                         <h3 id='projetos-total'>{totalPag}</h3> <h3>projetos</h3>
                     </div>
                     <div className="button-container">
-                        <input type="button" value="Todos os anos" onClick={() => setAno("todos os anos")} />
-                        <input type="button" value="2023" onClick={() => { setAno(2023) }} />
-                        <input type="button" value="2022" onClick={() => { setAno(2022) }} />
-                        <input type="button" value="2021" onClick={() => { setAno(2021) }} />
-                        <input type="button" value="2020" onClick={() => { setAno(2020) }} />
-                        <input type="button" value="2019" onClick={() => { setAno(2019) }} />
-                        <input type="button" value="2018" onClick={() => { setAno(2018) }} />
+                        {(() => {
+                            const anos = ["todos os anos", 2023, 2022, 2021, 2020, 2019, 2018];
+                            return anos.map((anoValue) => (
+                                <input
+                                    style={ano===anoValue?{backgroundColor:'#70e970'}:{}}
+                                    key={anoValue}
+                                    type="button"
+                                    value={anoValue}
+                                    onClick={() => setAno(anoValue)}
+                                />
+                            ));
+                        })()}
                     </div>
                 </div>
             </div>
-            <hr />
+            <hr style={esconderFilter ? { display: 'none' } : {}} />
+            <div onClick={() => setEsconderFilter(true)} className={esconderFilter? 'esconder' : 'toback'} >
+                <h2>Esconder</h2>
+            </div>
+            <div className={esconderFilter ? 'toback' : 'esconder'} onClick={() => setEsconderFilter(false)}>
+                <h2>Voltar</h2>
+                <h3>Foram achados <span style={{ color: '#70e970' }}>{totalPag}</span> projetos em <span style={{ color: '#70e970' }}>{ano}</span></h3>
+                {searchName ? <h3> com <span style={{ color: '#70e970' }}>{searchName}</span> no seu nome </h3> : <h2></h2>}
+                {searchEscola ? <h3> com <span style={{ color: '#70e970' }}>{searchEscola}</span> no seu nome </h3> : <h2></h2>}
+            </div>
             <div className='home'>
                 <Projetos ano={ano} searchEscola={searchEscola} searchName={searchName} onTotalProjectsChange={totalproje} />
             </div>

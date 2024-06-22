@@ -50,6 +50,7 @@ form label {
   display: flex;
   justify-content: center;
   gap: 5px;
+  color: white;
 }
 
 .qntdProjetos {
@@ -62,7 +63,7 @@ form label {
 }
 
 .home {
-  margin: 2rem;
+  margin: 0.5rem;
   text-align: left;
   /* Verde padrão do Bootstrap */
   /* Borda arredondada */
@@ -71,11 +72,6 @@ form label {
   min-height: 200px;
   /* Adiciona barra de rolagem quando necessário */
   /* border: solid 1px; */
-}
-
-h1 {
-  text-align: center;
-  color: white;
 }
 
 .button-container {
@@ -116,4 +112,24 @@ h1 {
   /* Remover outline padrão ao focar */
   box-shadow: 0 0 5px #70e970;
   /* Adicionar sombra ao focar */
+}
+
+.esconder {
+  display: none;
+}
+
+.toback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: 2s;
+  color: white;
+
+  gap: 4px;
+}
+
+.toback:hover {
+  cursor: pointer;
+  color: #70e970;
 }
