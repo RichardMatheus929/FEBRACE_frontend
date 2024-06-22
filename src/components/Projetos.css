@@ -11,12 +11,21 @@ h3 {
 }
 
 .paginacao {
-    /* border: solid; */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
-    /* justify-content: space-between; */
+    position: -webkit-sticky;
+    /* Para compatibilidade com Safari */
+    position: sticky;
+    top: 0;
+    /* Para garantir que a seção tenha um fundo visível */
+    padding: 5px 10px;
+    /* Ajuste de espaçamento interno (mais fino) */
+    z-index: 1000;
+    /* Para garantir que a seção fique acima de outros elementos */
+    margin: 0;
+    /* Remove margens ao redor da seção */
 }
 
 
