@@ -18,7 +18,7 @@ const Projetos = ({ ano, onTotalProjectsChange, searchName, searchEscola }) => {
 
     useEffect(() => {
         if (data.length === 0) {
-            axios.get('http://localhost:8000/projetos')
+            axios.get('https://febrace-project.up.railway.app/projetos')
                 .then(response => {
                     setData(response.data);
                 })

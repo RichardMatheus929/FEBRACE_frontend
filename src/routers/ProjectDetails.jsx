@@ -29,20 +29,19 @@ const ProjectDetails = () => {
             <h1>{project.nome}</h1>
             <br />
             <p><strong>Categoria de premisação:</strong> {project.categoria_premiacao}</p>
-            <p><strong>Escola:</strong> {project.escola}</p>
             <p><strong>Cidade:</strong> {project.cidade}</p>
             <p><strong>Estado:</strong> {project.estado}</p>
             <p></p>
             <hr />
             <br />
             <div>
-                <h3>Escola do projeto: {infoProject.escola}</h3>
+                <h3>Escola do projeto: <span>{infoProject.escola}</span></h3>
                 <br />
-                <h3>Premios que o projeto recebeu: {infoProject.premios}</h3>
+                <h3>Premios que o projeto recebeu: <span>{infoProject.premios}</span></h3>
                 <br />
-                <h3>Categorias que esse projeto ganhou: {infoProject.categorias}</h3>
+                <h3>Categorias que esse projeto ganhou: <span>{infoProject.categorias}</span>  </h3>
                 <br />
-                <h3>Anos que o projeto foi premiado: {infoProject.ano}</h3>
+                <h3>Anos que o projeto foi premiado: <span>{infoProject.ano}</span></h3>
             </div>
         </div>
     );

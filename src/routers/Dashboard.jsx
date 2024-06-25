@@ -5,14 +5,12 @@ import { useState,useEffect } from 'react'
 import "./Dashboard.css"
 import MapaBrasil from "../components/MapaBrasil"
 
+import { Classificacao } from '../dashboard-components/classificacao'
+
 const Dashboard = () => {
 
-    const [isLoaded, setIsLoaded] = useState(false);
-
     useEffect(() => {
-        // Delay to allow the fade-in effect to be noticeable
-        const timer = setTimeout(() => setIsLoaded(true), 4000);
-        return () => clearTimeout(timer);
+        
     }, []);
 
     return (
@@ -50,11 +48,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className='classificacao'>
-                <p>testo</p>
-                <p>testo</p>
-                <p>testo</p>
-                <p>testo</p>
-                <p>testo</p>
+                <Classificacao></Classificacao>
             </div>
         </div>
     )
