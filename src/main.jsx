@@ -15,18 +15,18 @@ const router = createBrowserRouter([
   {
     element: <App />,
     children: [{ 
-      'path': '/FEBRACE_frontend/projetos',
+      'path': 'FEBRACE_frontend/projetos',
       'element': <PagProjetos/>
     }, { 
-      'path': '/FEBRACE_frontend/dashboard', 
+      'path': 'FEBRACE_frontend/dashboard', 
       "element": <Dashboard/>
     },
     {
-      'path':'/FEBRACE_frontend/projeto',
+      'path':'FEBRACE_frontend/projeto',
       'element': <ProjectDetails/>
     },
     {
-      'path':'/FEBRACE_frontend/',
+      'path':'FEBRACE_frontend/',
       'element': <PagInical/>
     }  
   ]
