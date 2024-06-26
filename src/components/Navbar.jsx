@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.css";
-import imgFebrace from "./img/febrace.png"
+import imgFebrace from "./febrace.png"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="img">
         <a href="https://febrace.org.br/">
-          <img src={imgFebrace} alt="FEBRACE" />
+            <img src={imgFebrace} alt="FEBRACE" />
           {/* <link type="image" href="src\components\img\febrace.png" /> */}
         </a>
       </div>
