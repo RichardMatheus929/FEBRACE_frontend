@@ -4,9 +4,8 @@
 
 .cabecalho {
   display: flex;
-  justify-content: space-between;
-
-  padding-inline: 70px;
+  flex-direction: column;
+  padding-inline: 20px;
 }
 
 .filtro_anos {
@@ -20,13 +19,14 @@ form {
 }
 
 form label {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-#searchname,#searchescola {
+#searchname, #searchescola {
   /* border: solid; */
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .filtro_pesquisa {
@@ -38,14 +38,14 @@ form label {
 }
 
 .filtro_pesquisa input[type="text"] {
-  min-width: 60%;
+  width: 100%;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   color: #70e970;
 }
- 
+
 .mainProjetos {
   display: flex;
   justify-content: center;
@@ -58,32 +58,25 @@ form label {
   justify-content: center;
 }
 
-#projetos-total,#ano {
+#projetos-total, #ano {
   color: #70e970;
 }
 
 .home {
   margin: 0.5rem;
   text-align: left;
-  /* Verde padrão do Bootstrap */
-  /* Borda arredondada */
-  /* Sombra para um efeito 3D */
   max-height: 500px;
   min-height: 200px;
-  /* Adiciona barra de rolagem quando necessário */
-  /* border: solid 1px; */
+  /* overflow-y: auto; */
 }
 
 .button-container {
-  /* border: solid 1px; */
   padding: 20px;
   text-align: center;
-  align-items: center;
   display: flex;
-  align-items: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  /* Espaçamento entre os botões */
 }
 
 .button-container input[type="button"] {
@@ -93,25 +86,19 @@ form label {
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
   border-radius: 10px;
-  transition: 0.45;
-  /* Transição suave */
+  transition: 0.45s;
 }
 
 .button-container input[type="button"]:hover {
   background-color: #70e970;
   color: white;
-  /* Alterar a cor do texto para branco ao passar o mouse */
   border-color: rgb(255, 255, 255);
-  transform: scale(1.25);
-  /* Aumenta o botão em 10% */
-
+  transform: scale(1.1);
 }
 
 .button-container input[type="button"]:focus {
   outline: none;
-  /* Remover outline padrão ao focar */
   box-shadow: 0 0 5px #70e970;
-  /* Adicionar sombra ao focar */
 }
 
 .esconder {
@@ -125,11 +112,31 @@ form label {
   text-align: center;
   transition: 2s;
   color: white;
-
   gap: 4px;
 }
 
 .toback:hover {
   cursor: pointer;
   color: #70e970;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .cabecalho {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 70px;
+  }
+
+  #searchname, #searchescola {
+    flex-direction: row;
+  }
+
+  .filtro_pesquisa input[type="text"] {
+    width: 60%;
+  }
+
+  .button-container {
+    flex-wrap: nowrap;
+  }
 }

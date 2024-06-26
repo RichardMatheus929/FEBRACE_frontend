@@ -1,50 +1,45 @@
 .PagInicial {
     color: white;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: inline;
     padding-top: 90px;
 }
 
 .central {
-    justify-content: center;
-    border: 2px solid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: 12rem;
-    min-width: 12rem;
+    border: 2px solid;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgb(255, 255, 255);
-    justify-content: baseline;
+    padding: 20px;
+    max-width: 90%;
     overflow-wrap: break-word;
-    padding: 10px;
 }
 
 .txt-inicial {
-    position: relative;
-    width: max-content;
-    margin: auto;
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
+    font-size: 1.8rem;
+    white-space: normal;
+    /* Allow text to wrap */
     overflow: hidden;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    animation: blink 1s step-end infinite;
     padding: 10px;
+    width: 100%;
+    /* Make sure it fits within the central div */
+    text-align: center;
 }
 
 .descricao {
     padding: 20px;
+    font-size: 1.2rem;
 }
 
 .div-btn {
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 12rem;
-    min-width: 15rem;
-    border-radius: 15px;
-    justify-content: baseline;
-    padding: 10px;
     padding-top: 40px;
 }
 
@@ -55,7 +50,31 @@ button {
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
-    transition: 0.45;
+    transition: 0.45s;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .PagInicial {
+        padding-top: 60px;
+    }
+
+    .central {
+        padding: 30px;
+        max-width: 70%;
+    }
+
+    .txt-inicial {
+        font-size: 2rem;
+    }
+
+    .descricao {
+        font-size: 1.4rem;
+    }
+
+    .div-btn {
+        padding-top: 20px;
+    }
 }
 
 @keyframes blink {

@@ -1,20 +1,13 @@
 .dashboard {
     display: grid;
     color: white;
-
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-
     gap: 20px;
     padding: 10px;
-
     max-width: 100vw;
-    max-height: 100vh;
-    box-sizing: border-box;
-
     overflow: hidden;
-
-    animation: fadein 1s forwards;
+    animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
@@ -29,33 +22,57 @@
 
 /* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
+    .trofeu {
+        max-height: 10%;
+    }
+
     .dashboard {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
-        /* Ajuste o número de linhas conforme necessário */
     }
 
     .filtro {
         grid-row: auto;
     }
 
+    .btn-anos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .mapa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .total,
     .estatisca,
     .classificacao {
-        grid-row: auto;
         grid-column: span 1;
     }
 
     .classificacao {
-        grid-row: span 1;
+        grid-row: span 2;
+    }
+
+    .estatisca,
+    .total {
+        text-align: center;
+    }
+
+    .trofeu img {
+        width: 100%;
+        height: auto;
     }
 }
 
 .filtro {
     border: 1px solid white;
     border-radius: 10px;
-    grid-row: span 3;
-
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -69,9 +86,22 @@
     justify-content: space-between;
     margin: 10px 0;
     flex: 0.1;
+    flex-wrap: wrap;
+    /* Para permitir quebra de linha em dispositivos móveis */
 }
 
-/* Lembrar de tirar isso aqui */
+.btn-anos input[type="button"] {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 10px;
+    transition: 0.45s;
+    margin: 5px;
+    /* Espaçamento entre botões */
+}
+
 .mapa {
     display: flex;
     justify-content: center;
@@ -81,8 +111,6 @@
 .total {
     border: 1px solid white;
     border-radius: 10px;
-    grid-row: span 1;
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -97,15 +125,10 @@
     height: 100%;
 }
 
-.trofeu img {
+.trofeu img,
+.trofeu svg {
     height: 100%;
     width: 100%;
-}
-
-.trofeu svg {
-    min-width: 100%;
-    min-height: 100%;
-    box-shadow: none;
 }
 
 .trofeu path {
@@ -116,14 +139,10 @@
 .estatisca {
     border: 1px solid white;
     border-radius: 10px;
-    grid-row: span 1;
-
     display: flex;
     flex-direction: column;
     gap: 5px;
-
     text-align: left;
-
     padding-top: 5px;
 }
 
@@ -158,7 +177,6 @@
 
 .estatisca .color-box {
     border: solid 1px black;
-
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -171,18 +189,7 @@
     border-radius: 10px;
     grid-column: span 2;
     grid-row: span 2;
-
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.btn-anos input[type="button"] {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    border-radius: 10px;
-    transition: 0.45s;
 }

@@ -1,42 +1,48 @@
-import React from 'react'
-
-import { useState,useEffect } from 'react'
-
-import "./Dashboard.css"
-import MapaBrasil from "../components/MapaBrasil"
-
-import { Classificacao } from '../dashboard-components/classificacao'
+import React from 'react';
+import './Dashboard.css';
+import MapaBrasil from '../components/MapaBrasil';
+import { Classificacao } from '../dashboard-components/classificacao';
 
 const Dashboard = () => {
-
-    useEffect(() => {
-        
-    }, []);
-
     return (
         <div className='dashboard'>
             <div className='filtro'>
                 <p>Todos os anos</p>
                 <div className='btn-anos'>
-                    <input type="button" value="2023" />
-                    <input type="button" value="2022" />
-                    <input type="button" value="2021" />
-                    <input type="button" value="2020" />
-                    <input type="button" value="2019" />
-                    <input type="button" value="2018" />
+                    <input type='button' value='2023' />
+                    <input type='button' value='2022' />
+                    <input type='button' value='2021' />
+                    <input type='button' value='2020' />
+                    <input type='button' value='2019' />
+                    <input type='button' value='2018' />
                 </div>
-                <div className='mapa'>
-                    <MapaBrasil></MapaBrasil>
-                </div>
+            </div>
+            <div className='mapa'>
+                <MapaBrasil />
             </div>
             <div className='estatisca'>
                 <h1>424</h1>
                 <p>escolas foram premiadas no período 2023-2018</p>
-                <div><span className='color-box' id='box-sudeste'></span><span>140 escolas foram premiadas na região sudeste</span></div>
-                <div><span className='color-box' id='box-nordeste'></span><span>140 escolas foram premiadas na região nordeste</span></div>
-                <div><span className='color-box' id='box-sul'></span><span>140 escolas foram premiadas na região sul</span></div>
-                <div><span className='color-box' id='box-norte'></span><span>140 escolas foram premiadas na região norte</span></div>
-                <div><span className='color-box' id='box-centro-oeste'></span><span>140 escolas foram premiadas na região centro-oeste</span></div>
+                <div>
+                    <span className='color-box' id='box-sudeste'></span>
+                    <span>140 escolas foram premiadas na região sudeste</span>
+                </div>
+                <div>
+                    <span className='color-box' id='box-nordeste'></span>
+                    <span>140 escolas foram premiadas na região nordeste</span>
+                </div>
+                <div>
+                    <span className='color-box' id='box-sul'></span>
+                    <span>140 escolas foram premiadas na região sul</span>
+                </div>
+                <div>
+                    <span className='color-box' id='box-norte'></span>
+                    <span>140 escolas foram premiadas na região norte</span>
+                </div>
+                <div>
+                    <span className='color-box' id='box-centro-oeste'></span>
+                    <span>140 escolas foram premiadas na região centro-oeste</span>
+                </div>
             </div>
             <div className='total'>
                 <h1>1080</h1>
@@ -48,10 +54,10 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className='classificacao'>
-                <Classificacao></Classificacao>
+                <Classificacao />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Dashboard
+export default Dashboard;
