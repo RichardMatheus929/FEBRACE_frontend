@@ -25,7 +25,7 @@ const Navbar = () => {
         <div></div>
       </div>
       <ul className={`rotas-navbar ${menuOpen ? "show" : ""}`}>
-        <li><Link to={'/FEBRACE_backend'}>Página inicial</Link></li>
+        <li><Link to={'/FEBRACE_frontend'}>Página inicial</Link></li>
         <li><Link to={'/dashboard'}>Dashboard</Link></li>
         <li><Link to={"/projetos"} className="allprojects">Consultar todos os projetos</Link></li>
       </ul>
