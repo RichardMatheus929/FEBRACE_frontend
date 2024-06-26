@@ -14,15 +14,16 @@ import PagInical from './routers/PagInical.jsx'
 const router = createBrowserRouter([
   {
     element: <App />,
-    children: [{ 
-      'path': '/projetos',
+    children: [
+      { 
+      'path': '/FEBRACE_frontend/projetos',
       'element': <PagProjetos/>
     }, { 
-      'path': '/dashboard', 
+      'path': 'FEBRACE_frontend/dashboard', 
       "element": <Dashboard/>
     },
     {
-      'path':'/projeto',
+      'path':'FEBRACE_frontend/projetos/details',
       'element': <ProjectDetails/>
     },
     {

@@ -13,11 +13,11 @@ const ProjectDetails = () => {
     const id = searchParams.get('id');
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/projetos/${id}`)
+        axios.get(`https://richardmatheus929.pythonanywhere.com/projetos/${id}`)
             .then(response => setProject(response.data))
             .catch(error => console.error("There was an error fetching the project data!", error));
 
-        axios.get(`http://localhost:8000/projetos/${id}/info`)
+        axios.get(`https://richardmatheus929.pythonanywhere.com/projetos/${id}/info`)
             .then(response => setInfoProject(response.data))
             .catch(error => console.error("There was an error fetching the project data!", error));
     }, []);

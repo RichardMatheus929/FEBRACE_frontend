@@ -18,13 +18,15 @@ const Projetos = ({ ano, onTotalProjectsChange, searchName, searchEscola }) => {
 
     useEffect(() => {
         if (data.length === 0) {
-            axios.get('https://febrace-project.up.railway.app/projetos')
+            axios.get('https://richardmatheus929.pythonanywhere.com/projetos')
                 .then(response => {
                     setData(response.data);
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
                 });
+
+                console.log(filteredData)
         }
 
         let filtered = ano === "todos os anos" ? data : data.filter(item => item.ano === String(ano));
@@ -78,7 +80,7 @@ const Projetos = ({ ano, onTotalProjectsChange, searchName, searchEscola }) => {
             <div className="container">
                 {getItemsPage().map(item => (
                     <div className="card" key={item.id}>
-                        <Link to={`/projeto?id=${item.id}`}>
+                        <Link to={`details?id=${item.id}`}>
                             <h3 className={nameExiste?'destaque-pesquisa':''}>{item.nome}</h3>
                             <p ><strong>Categoria de premiação:</strong> {item.categoria_premiacao}</p>
                             <p className={escolaExiste?'destaque-pesquisa':''}><strong>Escola:</strong> {item.escola}</p>
