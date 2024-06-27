@@ -36,7 +36,7 @@
 }
 
 .allprojects:hover {
-    border: 4px solid green;
+    border: 1px solid green;
     color: green;
 }
 
