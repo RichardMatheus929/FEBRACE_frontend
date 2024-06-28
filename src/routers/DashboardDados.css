@@ -1,0 +1,49 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 88vh;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtro {
+    background-color: red;
+    display: flex;
+    justify-content: flex-start;
+    /* Ensure items align to the left */
+    align-items: flex-start;
+    /* Ensure items align to the top */
+    padding: 10px;
+    /* Optional: Add padding if needed */
+}
+
+.filtro .button-container {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    /* Align to the top */
+    justify-self: flex-start;
+    /* Align to the left */
+}
+
+.total {
+    background-color: blue;
+}
+
+.estatistica {
+    background-color: green;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.classificacao {
+    background-color: white;
+}

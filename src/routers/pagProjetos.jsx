@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <div className='pagProjetos'>
-            <div className={esconderFilter ? 'esconder' : 'cabecalho'}>
+            <div className={esconderFilter ? 'cabecalho' : 'esconder'}>
                 <div className='filtro_pesquisa'>
                     <h1>Pesquise por nome ou escola do projeto</h1>
                     <form action="post">
@@ -53,7 +53,7 @@ const Home = () => {
                             const anos = ["todos os anos", 2023, 2022, 2021, 2020, 2019, 2018];
                             return anos.map((anoValue) => (
                                 <input
-                                    style={ano===anoValue?{backgroundColor:'#70e970'}:{}}
+                                    style={ano === anoValue ? { backgroundColor: '#70e970' } : {}}
                                     key={anoValue}
                                     type="button"
                                     value={anoValue}
@@ -64,15 +64,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <hr style={esconderFilter ? { display: 'none' } : {}} />
-            <div onClick={() => setEsconderFilter(true)} className={esconderFilter? 'esconder' : 'toback'} >
-                <h2>Esconder</h2>
+            <hr style={esconderFilter ? {} : { display: 'none' }} />
+            <div onClick={() => setEsconderFilter(true)} className={esconderFilter ? 'esconder' : 'toback'} >
+                <h2>Filtros</h2>
             </div>
             <div className={esconderFilter ? 'toback' : 'esconder'} onClick={() => setEsconderFilter(false)}>
-                <h2>Voltar</h2>
+                <h2>Esconder</h2>
                 <h3>Foram achados <span style={{ color: '#70e970' }}>{totalPag}</span> projetos em <span style={{ color: '#70e970' }}>{ano}</span></h3>
                 {searchName ? <h3> com <span style={{ color: '#70e970' }}>{searchName}</span> no seu nome </h3> : <h2></h2>}
-                {searchEscola ? <h3> com <span style={{ color: '#70e970' }}>{searchEscola}</span> no seu nome </h3> : <h2></h2>}
+                {searchEscola ? <h3> com <span style={{ color: '#70e970' }}>{searchEscola}</span> em sua escola </h3> : <h2></h2>}
             </div>
             <div className='home'>
                 <Projetos ano={ano} searchEscola={searchEscola} searchName={searchName} onTotalProjectsChange={totalproje} />

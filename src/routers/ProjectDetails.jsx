@@ -12,12 +12,16 @@ const ProjectDetails = () => {
 
     const id = searchParams.get('id');
 
+    // const api = "http://localhost:8000"
+    const api = "https://richardmatheus929.pythonanywhere.com" 
+
+
     useEffect(() => {
-        axios.get(`https://richardmatheus929.pythonanywhere.com/projetos/${id}`)
+        axios.get(api + `/projetos/${id}`)
             .then(response => setProject(response.data))
             .catch(error => console.error("There was an error fetching the project data!", error));
 
-        axios.get(`https://richardmatheus929.pythonanywhere.com/projetos/${id}/info`)
+        axios.get(api + `/projetos/${id}/info`)
             .then(response => setInfoProject(response.data))
             .catch(error => console.error("There was an error fetching the project data!", error));
     }, []);
@@ -25,26 +29,24 @@ const ProjectDetails = () => {
     return project.length < 1 ? (
         <div> <Loading></Loading> </div>
     ) : (
-        <div className="project-details">
-            <h1>{project.nome}</h1>
-            <br />
-            <p><strong>Categoria de premisação:</strong> {project.categoria_premiacao}</p>
-            <p><strong>Cidade:</strong> {project.cidade}</p>
-            <p><strong>Estado:</strong> {project.estado}</p>
-            <p></p>
-            <hr />
-            <br />
-            <div>
-                <h3>Escola do projeto: <span>{infoProject.escola}</span></h3>
-                <br />
-                <h3>Premios que o projeto recebeu: <span>{infoProject.premios}</span></h3>
-                <br />
-                <h3>Categorias que esse projeto ganhou: <span>{infoProject.categorias}</span>  </h3>
-                <br />
-                <h3>Anos que o projeto foi premiado: <span>{infoProject.ano}</span></h3>
+        <div className="project-details-container">
+            <div className="project-card">
+                <h1 className="project-title">{project.nome}</h1>
+                <hr />
+                <div className="project-info">
+                    <p><strong>Cidade:</strong> {project.cidade}</p>
+                    <p><strong>Estado:</strong> {project.estado}</p>
+                </div>
+                <hr />
+                <div className="additional-info">
+                    <h3>Escola do projeto: <span>{infoProject.escola}</span></h3>
+                    <h3>Projetos premiados dessa escola: <span>{infoProject.escola_quantidade}</span></h3>
+                    <h3>Prêmios que esse projeto recebeu: <span>{infoProject.premios}</span></h3>
+                    <h3>Categorias que esse projeto ganhou: <span>{infoProject.categorias}</span></h3>
+                    <h3>Anos que o projeto foi premiado: <span>{infoProject.ano}</span></h3>
+                </div>
             </div>
         </div>
     );
-}
-
+};
 export default ProjectDetails;

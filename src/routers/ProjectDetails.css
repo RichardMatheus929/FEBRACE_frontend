@@ -1,13 +1,37 @@
-.project-details {
-    color: white;
-    text-align: left;
-    padding-left: 50px;
+
+.project-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.project-details h3 {
-    font-weight: inherit;
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
 }
 
-.project-details span {
+.project-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: black;
+    margin: 5px 0;
+}
+
+.additional-info h3 {
+    margin: 10px 0;
+    color: #555;
+}
+
+.additional-info span {
     font-weight: bold;
+    color: #000;
 }
