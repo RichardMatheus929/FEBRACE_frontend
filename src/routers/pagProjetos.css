@@ -6,10 +6,7 @@
   display: flex;
   flex-direction: column;
   padding-inline: 20px;
-}
-
-.filtro_anos {
-  /* border: solid; */
+  color: white;
 }
 
 form {
@@ -56,6 +53,7 @@ form label {
 .qntdProjetos {
   display: flex;
   justify-content: center;
+  gap: 5px;
 }
 
 #projetos-total, #ano {
