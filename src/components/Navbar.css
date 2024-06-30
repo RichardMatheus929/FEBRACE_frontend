@@ -40,6 +40,17 @@
     color: green;
 }
 
+.info-icon {
+    /* font-size: 1.5rem; */
+    cursor: pointer;
+    color: black;
+    /* padding: 0.5rem; */
+}
+
+.info-icon:hover {
+    color: red;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar {
