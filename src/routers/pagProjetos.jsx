@@ -72,7 +72,7 @@ const Home = () => {
                 <h2>Esconder</h2>
                 <h3>Foram achados <span style={{ color: '#70e970' }}>{totalPag}</span> projetos em <span style={{ color: '#70e970' }}>{ano}</span></h3>
                 {searchName ? <h3> com <span style={{ color: '#70e970' }}>{searchName}</span> no seu nome </h3> : <h2></h2>}
-                {searchEscola ? <h3> com <span style={{ color: '#70e970' }}>{searchEscola}</span> no seu nome </h3> : <h2></h2>}
+                {searchEscola ? <h3> com <span style={{ color: '#70e970' }}>{searchEscola}</span> em sua escola </h3> : <h2></h2>}
             </div>
             <div className='home'>
                 <Projetos ano={ano} searchEscola={searchEscola} searchName={searchName} onTotalProjectsChange={totalproje} />
