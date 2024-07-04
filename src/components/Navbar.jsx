@@ -28,6 +28,7 @@ const Navbar = () => {
         <li><Link to={"FEBRACE_frontend/info"} className="info-icon"> <i className="fas fa-exclamation-circle"></i> </Link></li>
         <li><Link to={'/FEBRACE_frontend'}>Página inicial</Link></li>
         <li><Link to={'FEBRACE_frontend/dashboard'}>Dashboard</Link></li>
+        <li><Link to={'FEBRACE_frontend/dashboardDados'}>Dashboard</Link></li>
         <li><Link to={"FEBRACE_frontend/projetos"} className="allprojects">Consultar todos os projetos</Link></li>
       </ul>
       {/* <div className="info-icon">
