@@ -12,6 +12,8 @@ import PagInical from './routers/PagInical.jsx'
 import Info from './routers/Info.jsx'
 import DashboardDados from "./routers/DashboardDados.jsx"
 
+import Dev from "./routers/Dev.jsx"
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
       'element': <PagProjetos/>
     }, { 
       'path': 'FEBRACE_frontend/dashboard', 
-      "element": <Dashboard/>
+      "element": <Dev/>
     },
     {
       'path':'FEBRACE_frontend/projetos/details',
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
     },
     {
       'path': 'FEBRACE_frontend/dashboardDados',
-      'element': <DashboardDados/>
+      'element': <Dev/>
     }
   ]
   }
